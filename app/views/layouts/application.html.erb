@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    
+
     <p class="flash"><%= flash.notice %></p>
     <div id="container">
       <div id="content">
@@ -19,9 +19,12 @@
           <% if logged_in? %>
             <%= "Logged in as #{ current_user.email }" %>
             <%= link_to "(logout)", logout_path %>
+            <%= link_to 'Authors', authors_path %>
           <% else %>
             <%= link_to "(login)", login_path %>
           <% end %>
+          <%= link_to 'Articles', articles_path %>
+          <%= link_to 'Tags', tags_path %>
         </h6>
       </div>
     </div>
